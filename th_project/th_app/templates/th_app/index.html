@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <title>Django LLM App</title>
+   </head>
+   <body>
+    <h1>Django LLM App</h1>
+       <form method="POST" action="{% url 'index' %}">
+           {% csrf_token %}
+            <fieldset>
+                <label for="topics-of-interest">Enter your topics of interest separated by commas (e.g., topic1, topic2, topic3):
+                    <input id="topics-of-interest" type="text" name="prompt" placeholder="topics of interest"></label>
+                <label for="path-to-pdf">Upload a PDF:
+                    <input id = "path-to-pdf", type="file" name="file" placeholder="path to pdf"></label>
+            </fieldset>
+            <input type="submit" value="Submit"/>
+       </form>
+       <div id="response"></div>
+       <script>
+           // Add JavaScript to handle AJAX requests and display responses
+       </script>
+   </body>
+   </html>
